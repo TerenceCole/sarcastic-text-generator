@@ -27,7 +27,13 @@ const filters = {
     // if there is nothing, return the regular letter
     return letter;
   },
-  unable() {},
+  unable(letter) {
+    const random = Math.floor(Math.random() * 3);
+    if (letter === ' ' && random === 2) {
+      return '...';
+    }
+    return letter;
+  },
 };
 
 function transformText(text) {
